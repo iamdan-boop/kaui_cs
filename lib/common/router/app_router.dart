@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kaui_cs/common/router/app_routes.dart';
 import 'package:kaui_cs/features/introduction/view/landing_page.dart';
-import 'package:kaui_cs/features/introduction/view/welcome_page.dart';
+import 'package:kaui_cs/features/products/view/product_list_page.dart';
+import 'package:kaui_cs/features/products/view/products_page.dart';
 
 abstract class AppRouter {
   static GoRouter router() {
     final rootNavigatorKey = GlobalKey<NavigatorState>();
-    final shellNavigatorKey = GlobalKey<NavigatorState>();
 
     return GoRouter(
       navigatorKey: rootNavigatorKey,
@@ -21,11 +21,24 @@ abstract class AppRouter {
           ),
         ),
         GoRoute(
-          path: '/welcome',
-          name: AppRoutes.welcomePage,
+          path: '/products',
+          name: AppRoutes.products,
+          parentNavigatorKey: rootNavigatorKey,
           pageBuilder: (context, state) => pageTransition(
-            page: WelcomePage(),
+            page: ProductsPage(),
           ),
+          routes: [
+            GoRoute(
+              path: ':category',
+              name: AppRoutes.productList,
+              pageBuilder: (context, state) {
+                final category = state.pathParameters['category'];
+                return pageTransition(
+                  page: ProductListPage(category: category!),
+                );
+              },
+            ),
+          ],
         ),
       ],
     );

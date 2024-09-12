@@ -13,11 +13,14 @@ dependencies:
   flutter_bloc: ^8.1.4
   flutter_localizations:
     sdk: flutter
+  freezed_annotation: ^2.4.1
+  flutter_gen: any
   go_router: ^13.0.1
   google_fonts: ^6.1.0
   intl: ^0.18.1
-  flutter_gen: any
+  json_annotation: ^4.0.0
   sizer: ^2.0.15
+  dio: ^5.7.0
 
 dev_dependencies:
   bloc_test: ^9.1.6
@@ -26,6 +29,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.4.0
   flutter_test:
     sdk: flutter
+  json_serializable: ^6.0.0
   mocktail: ^1.0.3
   very_good_analysis: ^5.1.0
 
@@ -36,6 +40,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/coffee_data.json
 
   fonts:
     - family: Poppins

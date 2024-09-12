@@ -20,15 +20,15 @@ class OperationTile extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: _backgroundColor,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Image.asset(
             _imagePath,
-            height: 60,
-            width: 60,
+            height: 100,
+            width: 100,
           ),
         ),
         const SizedBox(height: 3),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kaui_cs/common/components/bottom_bar.dart';
 import 'package:kaui_cs/common/components/custom_filled_button.dart';
 import 'package:kaui_cs/common/router/app_routes.dart';
 import 'package:kaui_cs/gen/assets.gen.dart';
@@ -34,6 +35,7 @@ class LandingPage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.w900,
+                          color: Colors.brown,
                         ),
                       ),
                       const SizedBox(height: 24),
@@ -51,7 +53,11 @@ class LandingPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               FilledButton(
-                onPressed: () => context.pushNamed(AppRoutes.welcomePage),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.brown),
+                ),
+                onPressed: () => context.pushNamed(AppRoutes.products),
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   child: Text('Explore More'),

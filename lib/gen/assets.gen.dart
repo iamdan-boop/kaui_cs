@@ -12,17 +12,33 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/chocolate-cake.png
+  AssetGenImage get chocolateCake =>
+      const AssetGenImage('assets/icons/chocolate-cake.png');
+
+  /// File path: assets/icons/coffee-beans.png
+  AssetGenImage get coffeeBeans =>
+      const AssetGenImage('assets/icons/coffee-beans.png');
+
   /// File path: assets/icons/coffee.png
   AssetGenImage get coffee => const AssetGenImage('assets/icons/coffee.png');
 
+  /// File path: assets/icons/dessert.png
+  AssetGenImage get dessert => const AssetGenImage('assets/icons/dessert.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [coffee];
+  List<AssetGenImage> get values =>
+      [chocolateCake, coffeeBeans, coffee, dessert];
 }
 
 class Assets {
   Assets._();
 
+  static const String coffeeData = 'assets/coffee_data.json';
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+
+  /// List of all assets
+  static List<String> get values => [coffeeData];
 }
 
 class AssetGenImage {

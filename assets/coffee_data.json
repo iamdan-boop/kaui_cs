@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Espresso",
+    "imagePath": "assets/icons/coffee.png",
+    "amount": 100
+  },
+  {
+    "id": 2,
+    "title": "Cappuccino",
+    "imagePath": "assets/icons/coffee.png",
+    "amount": 100
+  },
+  {
+    "id": 3,
+    "title": "Latte",
+    "imagePath": "assets/icons/coffee.png",
+    "amount": 100
+  },
+  {
+    "id": 4,
+    "title": "Americano",
+    "imagePath": "assets/icons/coffee.png",
+    "amount": 100
+  },
+  {
+    "id": 5,
+    "title": "Mocha",
+    "imagePath": "assets/icons/coffee.png",
+    "amount": 100
+  }
+]

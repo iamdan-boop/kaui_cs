@@ -1,4 +1,6 @@
 abstract class AppRoutes {
   static const landingPage = '/';
-  static const welcomePage = '/welcome';
+
+  static const products = '/products';
+  static const productList = '/products/:category';
 }
